@@ -7,6 +7,11 @@ int main(){
     int num = rand();
     int i;
     int countH = 0, countT = 0;
+    char name[20];
+
+    printf("Who are you?\n");
+    scanf("%s", name);
+    printf("Hello, %s", name);
 
     printf("Tossing a coin...\n");
 
@@ -22,6 +27,11 @@ int main(){
     }
 
     printf("Heads: %d, Tails: %d\n", countH, countT);
+
+    if(countH > countT)
+        printf("%s won!\n", name);
+    else
+        printf("%s lost!\n", name);
 
     return 0;
 
